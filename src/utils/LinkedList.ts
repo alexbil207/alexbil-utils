@@ -1,7 +1,6 @@
-interface INode<T> {
+export interface INode<T> {
   value: T;
   next: INode<T> | null;
-  prev: INode<T> | null;
 }
 interface ILinkedList<T> {
   add: (value: T) => void;
@@ -17,11 +16,9 @@ interface ILinkedList<T> {
 class Node<T> {
   value: T;
   next: INode<T> | null;
-  prev: INode<T> | null;
   constructor(value: T) {
     this.value = value;
     this.next = null;
-    this.prev = null;
   }
 }
 
