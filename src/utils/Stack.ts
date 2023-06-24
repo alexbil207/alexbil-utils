@@ -11,7 +11,7 @@ export class Stack<T> extends LinkedList<T> implements IStack<T> {
   }
 
   push(value: T) {
-    this.add(value);
+    this.unshift(value);
   }
 
   peek() {
