@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+<style>
+  table {
+    box-sizing: border-box;
+  }
+
+  td {
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid #000; */
+    padding: 0;
+  }
+
+  .cell_1 {
+    background-color: #000;
+  }
+
+  .cell_2 {
+    background-color: green;
+  }
+
+  .cell_3 {
+    background-color: red;
+  }
+</style>
+
+<body>
+  <table id="app"></table>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
