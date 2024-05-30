@@ -9,10 +9,10 @@ export const wordSearch = function (board: string[][], word: string) {
         const temp = board[i][j];
         board[i][j] = '#'; //mark as visited to avoid visiting again
         const result =
-            track(i + 1, j, index + 1) ||
-            track(i - 1, j, index + 1) ||
-            track(i, j + 1, index + 1) ||
-            track(i, j - 1, index + 1);
+            dfs(i + 1, j, index + 1) ||
+            dfs(i - 1, j, index + 1) ||
+            dfs(i, j + 1, index + 1) ||
+            dfs(i, j - 1, index + 1);
 
         board[i][j] = temp;
         return result;
