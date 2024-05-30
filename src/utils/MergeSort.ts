@@ -1,10 +1,10 @@
 export function mergeSort(nums: number[]){
     const length = nums.length
     if(length <=1) return nums
-    const middle = Math.floor(length / 2)
+    const middle = Math.floor(length / 2) // find the middle
     const left = nums.slice(0, middle)
     const right = nums.slice(middle)
-    return merge(mergeSort(left), mergeSort(right))
+    return merge(mergeSort(left), mergeSort(right)) //begin merging 
 }
 
 function merge(left: number[], right:number[]){
@@ -17,6 +17,6 @@ function merge(left: number[], right:number[]){
             const num = right.shift()
             mergedResult.push(num)
         }
-        return mergedResult
+        return [...mergedResult, ...left, ...right]
     }
 }
