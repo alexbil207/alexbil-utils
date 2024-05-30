@@ -1,8 +1,8 @@
-export const exist = function (board: string[][], word: string) {
+export const wordSearch = function (board: string[][], word: string) {
     const row = board.length;
     const col = board[0].length;
 
-    const track = (i: number, j: number, index: number) => {
+    const dfs = (i: number, j: number, index: number) => {
         if (index === word.length) return true;
 
         if (i < 0 || i >= row || j < 0 || j >= col || board[i][j] !== word[index]) return false; //borders protection and word validation
@@ -20,7 +20,7 @@ export const exist = function (board: string[][], word: string) {
 
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
-            if (track(i, j, 0)) return true; //start from the beginning 
+            if (board[i][j] === word[0] && dfs(i, j, 0)) return true; //seach the first letter and start from it
         }
     }
     return false
